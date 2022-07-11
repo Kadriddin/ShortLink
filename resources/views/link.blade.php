@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -13,7 +14,6 @@
                             {{--@method('PUT')--}}
                             <div class="form-group row">
                                 <label for="text" class="col-md-4 col-form-label text-md-right">Link</label>
-
                                 <a class="col-md-6">
                                     <input id="link" type="text" class="form-control" name="link" value="" required autocomplete="URL" autofocus>
                                 </a>
@@ -49,6 +49,7 @@
     $(document).ready(function() {
         $("#success-alert").hide();
         $("#btn").click(function ValidAlert() {
+            $('#shlink').empty();
             $('#danger').empty();
             var link = $('#link').val();
             var _token   = $('meta[name="csrf-token"]').attr('content');

@@ -17,6 +17,8 @@ class CreateLinkTable extends Migration
             $table->id();
             $table->string('code');
             $table->string('link');
+            $table->string('ShortLink');
+            $table->integer('num');
             $table->timestamps();
         });
     }
