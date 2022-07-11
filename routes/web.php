@@ -14,14 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('link');
+    return view('welcome');
+//    return view('link');
 });
 
 Auth::routes();
 
 Route::get('/home', 'ShortController@index')->name('home');
 
-Route::get('/link', 'ShortController@index')->name('link');
-Route::post('/ajax', 'ShortController@store');
+//Route::get('/link', 'ShortController@index')->name('link');
+//Route::post('/ajax', 'ShortController@store');
 Route::get('/{code}','ShortController@Shortlink')->name('Short.link');
 //resource
